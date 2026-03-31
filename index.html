@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en" data-ga-id="G-967J56JZ64">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HubOfPixels — SAP BTP, Fiori & Enterprise Mobile specialists with 13+ years experience. We build SAP CAP, Fiori, BTP and fully offline mobile solutions for Fortune 500 and government clients." />
+  <meta name="language" content="en" />
+  <meta name="keywords" content="SAP BTP, SAP Fiori, SAP CAP, SAP Build, Enterprise Mobility, HubOfPixels, SAP consulting" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="author" content="HubOfPixels" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="canonical" href="https://hubofpixels.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://hubofpixels.com/" />
+  <link rel="alternate" hreflang="en-au" href="https://hubofpixels.com/" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:site_name" content="HubOfPixels" />
+  <meta property="og:title" content="HubOfPixels | Enterprise Web & Mobile Development" />
+  <meta property="og:description" content="HubOfPixels — SAP BTP, Fiori & Enterprise Mobile specialists with 13+ years experience. We build SAP CAP, Fiori, BTP and fully offline mobile solutions for Fortune 500 and government clients." />
+  <meta property="og:url" content="https://hubofpixels.com/" />
+  <meta property="og:image" content="https://hubofpixels.com/static/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="HubOfPixels SAP BTP and enterprise mobility specialists" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HubOfPixels | Enterprise Web & Mobile Development" />
+  <meta name="twitter:description" content="HubOfPixels — SAP BTP, Fiori & Enterprise Mobile specialists with 13+ years experience." />
+  <meta name="twitter:image" content="https://hubofpixels.com/static/og-cover.jpg" />
+  <meta name="twitter:creator" content="@HubOfPixels" />
+  <title>HubOfPixels | Enterprise Web & Mobile Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <!-- Google Analytics 4 -->
+  <script>
+    (function() {
+      const GA_ID = document.documentElement.dataset.gaId;
+      if (!GA_ID) {
+        console.warn('Google Analytics measurement ID missing. Update data-ga-id on <html>.');
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      window.gtag = gtag;
+
+      const isLocalhost = ['localhost', '127.0.0.1'].includes(location.hostname);
+      gtag('js', new Date());
+      gtag('config', GA_ID, {
+        anonymize_ip: true,
+        page_path: window.location.pathname,
+        debug_mode: isLocalhost
+      });
+      if (isLocalhost) {
+        console.info(`Google Analytics debug mode enabled for ${GA_ID}`);
+      }
+    })();
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:    #0A0A0A;
+      --gray-900: #171717;
+      --gray-800: #262626;
+      --gray-600: #525252;
+      --gray-400: #A3A3A3;
+      --gray-200: #E5E5E5;
+      --gray-100: #F5F5F5;
+      --gray-50:  #FAFAFA;
+      --white:    #FFFFFF;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--black); background: var(--white); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ── Layout ── */
+    .wrap  { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+    .wrap-sm { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font); font-size: 14px; font-weight: 600;
+      padding: 11px 22px; border-radius: 8px; cursor: pointer;
+      border: 1.5px solid transparent; transition: all .18s ease;
+      letter-spacing: -.01em;
+    }
+    .btn-dark  { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover  { background: var(--gray-800); border-color: var(--gray-800); }
+    .btn-ghost { background: transparent; color: var(--black); border-color: var(--gray-200); }
+    .btn-ghost:hover { border-color: var(--black); }
+    .btn-lg { padding: 14px 28px; font-size: 15px; border-radius: 10px; }
+
+    /* ── Divider ── */
+    hr { border: none; border-top: 1px solid var(--gray-200); }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 64px; display: flex; align-items: center;
+      background: rgba(255,255,255,.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    .nav.scrolled { border-bottom-color: var(--gray-200); }
+    .nav-inner {
+      max-width: 1120px; margin: 0 auto; padding: 0 32px;
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 16px; font-weight: 800; letter-spacing: -.03em;
+      color: var(--black); display: flex; align-items: center; gap: 8px;
+    }
+    .nav-logo-sq {
+      width: 28px; height: 28px; background: var(--black); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--white); font-weight: 900;
+    }
+    .nav-menu { display: flex; align-items: center; gap: 28px; }
+    .nav-menu a { font-size: 14px; color: var(--gray-600); font-weight: 500; transition: color .15s; }
+    .nav-menu a:hover { color: var(--black); }
+    .nav-actions { display: flex; gap: 8px; }
+    .nav-toggle {
+      display: none;
+      width: 40px; height: 40px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 10px;
+      background: var(--white);
+      align-items: center; justify-content: center;
+      gap: 4px; flex-direction: column;
+      cursor: pointer;
+      transition: border-color .15s;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 18px; height: 2px;
+      background: var(--black);
+      border-radius: 999px;
+      transition: transform .2s ease, width .2s ease;
+    }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; width: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 160px 0 100px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .hero-inner { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--gray-600);
+      margin-bottom: 32px;
+    }
+    .hero-kicker-line { width: 20px; height: 1.5px; background: var(--gray-400); }
+    .hero-title {
+      font-size: clamp(42px, 7vw, 88px);
+      font-weight: 800; line-height: 1.0;
+      letter-spacing: -.04em; color: var(--black);
+      margin-bottom: 28px; max-width: 900px;
+    }
+    .hero-title em { font-style: italic; font-weight: 300; color: var(--gray-600); }
+    .hero-sub {
+      font-size: 18px; color: var(--gray-600); line-height: 1.75;
+      max-width: 540px; margin-bottom: 44px; font-weight: 400;
+    }
+    .hero-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 72px; }
+    .hero-stats { display: flex; gap: 48px; flex-wrap: wrap; }
+    .hero-stat-val {
+      font-size: 28px; font-weight: 800; letter-spacing: -.04em; color: var(--black); line-height: 1;
+    }
+    .hero-stat-lbl { font-size: 13px; color: var(--gray-400); margin-top: 4px; font-weight: 500; }
+
+    /* ── Section base ── */
+    .section { padding: 96px 0; }
+    .section-bordered { border-bottom: 1px solid var(--gray-200); }
+    .section-bg { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
+
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--gray-400);
+      margin-bottom: 20px; display: block;
+    }
+    .section-title {
+      font-size: clamp(26px, 3.5vw, 42px);
+      font-weight: 800; letter-spacing: -.03em; line-height: 1.15;
+      color: var(--black); margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 16px; color: var(--gray-600); line-height: 1.75; max-width: 520px;
+    }
+    .section-head-row {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 32px; margin-bottom: 56px; flex-wrap: wrap;
+    }
+
+    /* ── Trusted logos ── */
+    .logos-section { padding: 44px 0; border-bottom: 1px solid var(--gray-200); }
+    .logos-label { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 24px; text-align: center; }
+    .logos-row { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+    .logo-tag {
+      font-size: 13px; font-weight: 600; color: var(--gray-600);
+      border: 1px solid var(--gray-200); border-radius: 100px;
+      padding: 8px 18px; background: var(--white);
+      transition: all .15s;
+    }
+    .logo-tag:hover { border-color: var(--black); color: var(--black); }
+
+    /* ── Services ── */
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); border-radius: 16px; overflow: hidden; }
+    .svc-cell {
+      background: var(--white); padding: 36px 32px;
+      transition: background .18s;
+      cursor: default;
+    }
+    .svc-cell:hover { background: var(--gray-50); }
+    .svc-num { font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 20px; }
+    .svc-name { font-size: 17px; font-weight: 700; letter-spacing: -.02em; color: var(--black); margin-bottom: 12px; line-height: 1.3; }
+    .svc-desc { font-size: 14px; color: var(--gray-600); line-height: 1.7; margin-bottom: 20px; }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .svc-tag { font-size: 11px; font-weight: 600; color: var(--gray-600); border: 1px solid var(--gray-200); border-radius: 4px; padding: 3px 8px; }
+
+    /* ── SAP ── */
+    .sap-section { background: var(--black); padding: 96px 0; }
+    .sap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .sap-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 20px; }
+    .sap-title { font-size: clamp(28px, 3.5vw, 44px); font-weight: 800; letter-spacing: -.03em; line-height: 1.15; color: var(--white); margin-bottom: 16px; }
+    .sap-sub { font-size: 15px; color: var(--gray-400); line-height: 1.8; margin-bottom: 40px; }
+    .sap-list { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--gray-800); border-radius: 12px; overflow: hidden; }
+    .sap-list-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px 22px; background: var(--gray-900);
+      border-bottom: 1px solid var(--gray-800);
+      transition: background .15s;
+    }
+    .sap-list-item:last-child { border-bottom: none; }
+    .sap-list-item:hover { background: var(--gray-800); }
+    .sap-item-icon { font-size: 18px; margin-top: 2px; flex-shrink: 0; width: 28px; }
+    .sap-item-name { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .sap-item-desc { font-size: 13px; color: var(--gray-400); line-height: 1.6; }
+
+    .sap-right { display: flex; flex-direction: column; gap: 20px; }
+    .sap-big {
+      border: 1px solid var(--gray-800); border-radius: 12px;
+      padding: 28px 28px; background: var(--gray-900);
+    }
+    .sap-big-num { font-size: 52px; font-weight: 900; letter-spacing: -.05em; color: var(--white); line-height: 1; margin-bottom: 8px; }
+    .sap-big-desc { font-size: 13px; color: var(--gray-400); line-height: 1.65; }
+    .sap-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .sap-chip { font-size: 12px; font-weight: 600; color: var(--gray-400); border: 1px solid var(--gray-800); border-radius: 6px; padding: 6px 12px; background: var(--gray-900); letter-spacing: .01em; }
+    .sap-award { display: flex; align-items: flex-start; gap: 14px; border: 1px solid var(--gray-800); border-radius: 12px; padding: 22px; background: var(--gray-900); }
+    .sap-award-icon { font-size: 24px; flex-shrink: 0; }
+    .sap-award-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .sap-award-desc  { font-size: 13px; color: var(--gray-400); line-height: 1.6; }
+
+    /* ── Metrics ── */
+    .metrics-section { padding: 72px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
+    .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .metric-cell { padding: 0 48px; border-right: 1px solid var(--gray-200); }
+    .metric-cell:first-child { padding-left: 0; }
+    .metric-cell:last-child  { border-right: none; padding-right: 0; }
+    .metric-num { font-size: clamp(40px, 4.5vw, 58px); font-weight: 900; letter-spacing: -.04em; color: var(--black); line-height: 1; margin-bottom: 8px; }
+    .metric-lbl { font-size: 13px; color: var(--gray-400); font-weight: 500; }
+
+    /* ── Process ── */
+    .process-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--gray-200); border-radius: 16px; overflow: hidden; }
+    .process-item {
+      display: grid; grid-template-columns: 60px 1fr;
+      gap: 0; border-bottom: 1px solid var(--gray-200);
+      transition: background .15s;
+    }
+    .process-item:last-child { border-bottom: none; }
+    .process-item:hover { background: var(--gray-50); }
+    .process-num {
+      padding: 28px 0 28px 28px;
+      font-size: 13px; font-weight: 700; color: var(--gray-400);
+      letter-spacing: .02em; display: flex; align-items: flex-start; padding-top: 30px;
+    }
+    .process-body { padding: 28px 28px 28px 0; border-left: 1px solid var(--gray-200); }
+    .process-name { font-size: 16px; font-weight: 700; letter-spacing: -.02em; color: var(--black); margin-bottom: 6px; }
+    .process-desc { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+
+    /* ── Industries ── */
+    .ind-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .ind-card {
+      border: 1.5px solid var(--gray-200); border-radius: 14px;
+      padding: 28px 26px; background: var(--white);
+      transition: all .18s ease; cursor: default;
+    }
+    .ind-card:hover { border-color: var(--black); transform: translateY(-2px); }
+    .ind-icon { font-size: 24px; margin-bottom: 16px; }
+    .ind-name { font-size: 16px; font-weight: 700; letter-spacing: -.02em; color: var(--black); margin-bottom: 6px; }
+    .ind-desc { font-size: 13px; color: var(--gray-400); line-height: 1.6; }
+
+    /* ── Testimonials ── */
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .testi-card {
+      border: 1px solid var(--gray-200); border-radius: 14px;
+      padding: 30px 28px; background: var(--white);
+      display: flex; flex-direction: column; gap: 16px;
+      transition: border-color .18s;
+    }
+    .testi-card:hover { border-color: var(--black); }
+    .testi-stars { font-size: 13px; letter-spacing: 2px; color: var(--black); }
+    .testi-quote { font-size: 14px; color: var(--gray-600); line-height: 1.8; flex: 1; }
+    .testi-author { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--gray-200); }
+    .testi-avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--black); color: var(--white);
+      font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .testi-name { font-size: 13px; font-weight: 700; color: var(--black); }
+    .testi-role { font-size: 12px; color: var(--gray-400); margin-top: 1px; }
+
+    /* ── Partners ── */
+    .partners-section { padding: 64px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
+    .partners-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-400); text-align: center; margin-bottom: 32px; }
+    .partners-row { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .partner-pill {
+      display: flex; align-items: center; gap: 8px;
+      border: 1px solid var(--gray-200); border-radius: 10px;
+      padding: 14px 22px; background: var(--white);
+      font-size: 14px; font-weight: 700; color: var(--gray-800);
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+      transition: all .15s;
+    }
+    .partner-pill:hover { border-color: var(--black); box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+
+    /* ── CTA ── */
+    .cta-title {
+      font-size: clamp(32px, 5vw, 64px); font-weight: 800;
+      letter-spacing: -.04em; line-height: 1.05;
+      color: var(--black); margin: 20px 0 18px;
+    }
+    .cta-sub { font-size: 17px; color: var(--gray-600); line-height: 1.75; max-width: 480px; margin: 0 auto 44px; }
+    .contact-section { padding: 120px 0; border-top: 1px solid var(--gray-200); background: var(--gray-50); }
+    .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: flex-start; }
+    .contact-copy .section-label { display: inline-block; }
+    .contact-copy .cta-sub { margin: 0 0 28px; max-width: 520px; text-align: left; }
+    .contact-benefits {
+      list-style: none; margin: 0 0 24px; padding: 0;
+      display: grid; gap: 10px; font-size: 14px; color: var(--gray-600); font-weight: 500;
+    }
+    .contact-alt { font-size: 14px; color: var(--gray-600); margin-top: 16px; }
+    .contact-alt a { color: var(--black); font-weight: 600; }
+    .contact-form-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 30px 80px rgba(10,10,10,.08);
+    }
+    .contact-form { display: flex; flex-direction: column; gap: 18px; }
+    .form-row { display: flex; gap: 18px; flex-wrap: wrap; }
+    .form-field { flex: 1; display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--gray-600); }
+    .form-field span { font-weight: 600; color: var(--black); }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%; border: 1.5px solid var(--gray-200); border-radius: 12px;
+      padding: 14px 16px; font-size: 14px; font-family: var(--font);
+      transition: border-color .15s, box-shadow .15s; background: var(--white);
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--black);
+      box-shadow: 0 0 0 2px rgba(10,10,10,.08);
+      outline: none;
+    }
+    .form-field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--gray-400) 50%), linear-gradient(135deg, var(--gray-400) 50%, transparent 50%); background-position: calc(100% - 20px) calc(50% - 3px), calc(100% - 15px) calc(50% - 3px); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; }
+    .form-field textarea { min-height: 140px; resize: vertical; }
+    .hp-field { position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none; }
+    .form-consent { display: flex; gap: 10px; font-size: 13px; color: var(--gray-600); align-items: flex-start; }
+    .form-consent input { margin-top: 4px; }
+    .btn.full { width: 100%; justify-content: center; }
+    .form-status { font-size: 13px; color: var(--gray-600); min-height: 18px; }
+
+    /* ── Footer ── */
+    .footer { padding: 64px 0 0; border-top: 1px solid var(--gray-200); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 56px; }
+    .footer-brand { font-size: 15px; font-weight: 800; letter-spacing: -.03em; color: var(--black); }
+    .footer-desc { font-size: 14px; color: var(--gray-400); line-height: 1.75; margin-top: 14px; max-width: 260px; }
+    .footer-socials { display: flex; gap: 8px; margin-top: 24px; }
+    .footer-soc {
+      width: 34px; height: 34px; border: 1px solid var(--gray-200); border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: var(--gray-600); transition: all .15s;
+    }
+    .footer-soc:hover { border-color: var(--black); color: var(--black); }
+    .footer-col-head { font-size: 12px; font-weight: 700; color: var(--black); letter-spacing: -.01em; margin-bottom: 18px; }
+    .footer-col-links { display: flex; flex-direction: column; gap: 11px; }
+    .footer-col-links a { font-size: 14px; color: var(--gray-400); transition: color .15s; }
+    .footer-col-links a:hover { color: var(--black); }
+    .footer-bottom { border-top: 1px solid var(--gray-200); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-copy { font-size: 13px; color: var(--gray-400); }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 13px; color: var(--gray-400); transition: color .15s; }
+    .footer-legal a:hover { color: var(--black); }
+
+    /* ── Reveal animation ── */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 960px) {
+      .nav-toggle { display: flex; }
+      .nav-actions { display: none; }
+      .nav-menu  {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        gap: 20px;
+        padding: 36px 32px 48px;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: 0 40px 80px rgba(10,10,10,.12);
+        transform: translateY(-120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform .25s ease, opacity .25s ease;
+        z-index: 140;
+        height: calc(100vh - 64px);
+        overflow-y: auto;
+      }
+      .nav-menu a { font-size: 16px; font-weight: 600; color: var(--black); }
+      .nav-menu[data-visible=\"true\"] {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      body.nav-open { overflow: hidden; }
+      .svc-grid  { grid-template-columns: repeat(2, 1fr); }
+      .sap-grid  { grid-template-columns: 1fr; gap: 48px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .metrics-row { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .metric-cell { border-right: none; border-bottom: 1px solid var(--gray-200); padding: 0 0 32px; }
+      .metric-cell:last-child { border-bottom: none; padding-bottom: 0; }
+    }
+    @media (max-width: 720px) {
+      .svc-grid  { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .ind-grid  { grid-template-columns: repeat(2, 1fr); }
+      .contact-form-card { padding: 28px; }
+      .form-row { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .ind-grid  { grid-template-columns: 1fr; }
+      .hero-stats { gap: 28px; }
+      .hero-title { letter-spacing: -.03em; }
+      .cta-btns  { flex-direction: column; align-items: center; }
+      .contact-form-card { padding: 24px; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://hubofpixels.com/#hubofpixels",
+      "name": "HubOfPixels",
+      "url": "https://hubofpixels.com/",
+      "description": "SAP BTP, Fiori and enterprise mobility specialists delivering CAP, BTP and offline mobile solutions for Fortune 500 and government clients.",
+      "areaServed": "Global",
+      "foundingDate": "2015",
+      "email": "hubofpixels@gmail.com",
+      "telephone": "+61-000-000-000",
+      "logo": "https://hubofpixels.com/static/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AU"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "hubofpixels@gmail.com",
+          "telephone": "+61-000-000-000",
+          "availableLanguage": [
+            "en"
+          ],
+          "areaServed": "Global"
+        }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What SAP services does HubOfPixels provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We design and deliver SAP BTP, CAP, Fiori, Build Work Zone, and fully offline enterprise mobility solutions end to end, from UX strategy through integration, QA, and go-live support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I get an SAP assessment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You receive a tailored technical assessment and roadmap within five business days after our discovery workshop, including recommendations for architecture, security, and rollout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with regulated or government environments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HubOfPixels has delivered SAP programs for state and federal government, defense, transport, energy, and other regulated industries with compliance, accessibility, and security requirements."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-sq">H</div>
+        HubOfPixels
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu" id="navMenu" data-visible="false">
+        <a href="#services">Services</a>
+        <a href="#sap">SAP Expertise</a>
+        <a href="#industries">Industries</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+        <a href="#contact" class="btn btn-dark">Get Started →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-kicker">
+        <span class="hero-kicker-line"></span>
+        SAP BTP · Fiori · Enterprise Mobility · 13+ Years Experience
+      </div>
+      <h1 class="hero-title">
+        Build smarter.<br/>
+        Scale faster.<br/>
+        <em>Go enterprise.</em>
+      </h1>
+      <p class="hero-sub">
+        A passionate SAP UX &amp; BTP specialist studio with 13+ years experience building complex BTP cloud applications, Fiori solutions, and fully offline enterprise mobile apps for government agencies and Fortune 500 companies.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-dark btn-lg">Start a Project →</a>
+        <a href="#sap" class="btn btn-ghost btn-lg">SAP Solutions</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-val">13+</div>
+          <div class="hero-stat-lbl">Years SAP experience</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">5+</div>
+          <div class="hero-stat-lbl">SAP certifications</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">0</div>
+          <div class="hero-stat-lbl">Failed projects</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">15+</div>
+          <div class="hero-stat-lbl">Business processes delivered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED -->
+  <div class="logos-section">
+    <div class="wrap">
+      <p class="logos-label">Delivered across sectors including</p>
+      <div class="logos-row">
+        <span class="logo-tag">Defense &amp; Military</span>
+        <span class="logo-tag">Public Transport</span>
+        <span class="logo-tag">Energy &amp; Utilities</span>
+        <span class="logo-tag">Oil &amp; Gas</span>
+        <span class="logo-tag">Food &amp; Beverage</span>
+        <span class="logo-tag">State &amp; Federal Government</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="section section-bordered" id="services">
+    <div class="wrap">
+      <div class="section-head-row reveal">
+        <div>
+          <span class="section-label">What we build</span>
+          <h2 class="section-title">Full-service digital<br/>for enterprise scale.</h2>
+        </div>
+        <p class="section-sub">From SAP Fiori apps to customer portals — we deliver across the entire web and mobile stack.</p>
+      </div>
+      <div class="svc-grid reveal">
+
+        <div class="svc-cell">
+          <div class="svc-num">01</div>
+          <div class="svc-name">SAP BTP Cloud Application Development</div>
+          <p class="svc-desc">Cloud-native applications on SAP Business Technology Platform using the CAP framework, SAP HANA Cloud, OData v4, and multi-target application (MTA) deployment. Specialists in building and certifying apps for the SAP Store.</p>
+          <div class="svc-tags"><span class="svc-tag">SAP BTP</span><span class="svc-tag">CAP / CAPM</span><span class="svc-tag">SAP Build</span><span class="svc-tag">MTA</span><span class="svc-tag">HANA Cloud</span></div>
+        </div>
+
+        <div class="svc-cell">
+          <div class="svc-num">02</div>
+          <div class="svc-name">Fully Offline Enterprise Mobile Apps</div>
+          <p class="svc-desc">Native Android and iOS enterprise applications built with BTP SDK for Android and SAP Mobile Platform — designed for complete offline, online, and partially offline operation, including multi-user SAML and SSO via Azure IDP.</p>
+          <div class="svc-tags"><span class="svc-tag">BTP SDK Android</span><span class="svc-tag">SAP Mobile Platform</span><span class="svc-tag">MDK</span><span class="svc-tag">Offline-First</span><span class="svc-tag">SAML / SSO</span></div>
+        </div>
+
+        <div class="svc-cell">
+          <div class="svc-num">03</div>
+          <div class="svc-name">SAP Fiori &amp; UI5 Development</div>
+          <p class="svc-desc">Custom Fiori applications, Fiori elements, and UI5 components for S/4HANA and ECC. Full OData service development, Fiori Launchpad configuration, shell plugins, and role-based UI personalisation.</p>
+          <div class="svc-tags"><span class="svc-tag">SAP Fiori</span><span class="svc-tag">SAP UI5</span><span class="svc-tag">OData v2/v4</span><span class="svc-tag">S/4HANA</span><span class="svc-tag">ECC</span></div>
+        </div>
+
+        <div class="svc-cell">
+          <div class="svc-num">04</div>
+          <div class="svc-name">SAP Build Process Automation</div>
+          <p class="svc-desc">End-to-end automation of business processes including multi-level approval workflows, decision tables, form-based user interactions, desktop agent automation, and CI/CD pipeline integration via Git on SAP BTP Cloud Foundry.</p>
+          <div class="svc-tags"><span class="svc-tag">SAP Build</span><span class="svc-tag">Process Automation</span><span class="svc-tag">Workflow</span><span class="svc-tag">CI/CD</span></div>
+        </div>
+
+        <div class="svc-cell">
+          <div class="svc-num">05</div>
+          <div class="svc-name">SAP UX Design &amp; User Research</div>
+          <p class="svc-desc">Human-centred UX design for SAP solutions — from onsite user research and persona development to wireframing, Figma prototyping, and Fiori design guideline-compliant UI across phone, tablet, and desktop.</p>
+          <div class="svc-tags"><span class="svc-tag">Fiori Design</span><span class="svc-tag">UX Research</span><span class="svc-tag">Figma</span><span class="svc-tag">Accessibility</span></div>
+        </div>
+
+        <div class="svc-cell">
+          <div class="svc-num">06</div>
+          <div class="svc-name">S/4HANA Integration &amp; ABAP</div>
+          <p class="svc-desc">Deep integration with S/4HANA and ECC via ABAP, CDS views, BOPF, OData services using MAIF methodology, and SAP API Business Hub — including secure destination connectivity and real-time data synchronisation.</p>
+          <div class="svc-tags"><span class="svc-tag">ABAP</span><span class="svc-tag">CDS</span><span class="svc-tag">BOPF</span><span class="svc-tag">MAIF</span><span class="svc-tag">S/4HANA Integration</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SAP SECTION -->
+  <section class="sap-section" id="sap">
+    <div class="wrap">
+      <div class="sap-grid">
+        <div>
+          <div class="sap-label">13+ Years SAP Expertise</div>
+          <h2 class="sap-title">Recognised SAP BTP<br/>&amp; Mobility specialist.</h2>
+          <p class="sap-sub">Awarded SAP Community 'Member of the Month' (Feb 2015) for expertise in SAP Mobility. Delivered complex SAP digital transformation programs for Fortune 500 companies and state &amp; federal government agencies across Australia and globally.</p>
+          <div class="sap-list">
+            <div class="sap-list-item">
+              <div class="sap-item-icon">☁️</div>
+              <div>
+                <div class="sap-item-name">SAP BTP &amp; CAP Architecture</div>
+                <div class="sap-item-desc">Design and delivery of cloud-native BTP apps using CAP, flat-model domain design, single-purpose microservices, MTA deployment, and SAP Store certification.</div>
+              </div>
+            </div>
+            <div class="sap-list-item">
+              <div class="sap-item-icon">📱</div>
+              <div>
+                <div class="sap-item-name">Offline Mobile &amp; SAP Mobile Platform</div>
+                <div class="sap-item-desc">Architected fully offline military-grade mobile solutions using BTP SDK for Android and SMP 3.0 — including delta sync, MAIF OData, multi-user SAML, and Azure IDP integration.</div>
+              </div>
+            </div>
+            <div class="sap-list-item">
+              <div class="sap-item-icon">🎨</div>
+              <div>
+                <div class="sap-item-name">SAP Fiori / UI5 &amp; Launchpad</div>
+                <div class="sap-item-desc">Custom Fiori apps, Fiori elements with annotations, Launchpad configuration, UI library upgrades, and ABAP OData services across ECC and S/4HANA landscapes.</div>
+              </div>
+            </div>
+            <div class="sap-list-item">
+              <div class="sap-item-icon">🤖</div>
+              <div>
+                <div class="sap-item-name">SAP Build Process Automation &amp; AI</div>
+                <div class="sap-item-desc">Multi-level approval workflows, decision tables, screen automation for Fiori, CI/CD pipelines on BTP Cloud Foundry, and watsonx.ai integration for intelligent enterprise solutions.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sap-right">
+          <div class="sap-big">
+            <div class="sap-big-num">13+</div>
+            <div class="sap-big-desc">Years of SAP experience across Defense, Public Transport, Energy &amp; Utilities, Oil &amp; Gas, and Food &amp; Beverage sectors — with zero failed projects.</div>
+          </div>
+          <div class="sap-chips">
+            <span class="sap-chip">SAP BTP</span>
+            <span class="sap-chip">SAP CAP / CAPM</span>
+            <span class="sap-chip">SAP Build</span>
+            <span class="sap-chip">SAP Fiori / UI5</span>
+            <span class="sap-chip">MDK</span>
+            <span class="sap-chip">BTP SDK Android</span>
+            <span class="sap-chip">SAP Mobile Platform</span>
+            <span class="sap-chip">OData v2 / v4</span>
+            <span class="sap-chip">ABAP / CDS / BOPF</span>
+            <span class="sap-chip">JavaScript / Node.js</span>
+            <span class="sap-chip">MAIF</span>
+            <span class="sap-chip">watsonx.ai</span>
+            <span class="sap-chip">HANA XS JS</span>
+            <span class="sap-chip">IoT</span>
+          </div>
+          <div class="sap-award">
+            <div class="sap-award-icon">🏆</div>
+            <div>
+              <div class="sap-award-title">SAP Community Member of the Month — Feb 2015</div>
+              <div class="sap-award-desc">Globally recognised by SAP for expertise in SAP Mobility and contributions to the SAP Community Network. Speaker at DKOM'16, SAP SIT Bangalore, and SIT Hyderabad.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <div class="metrics-section">
+    <div class="wrap">
+      <div class="metrics-row">
+        <div class="metric-cell">
+          <div class="metric-num">13+</div>
+          <div class="metric-lbl">Years SAP experience</div>
+        </div>
+        <div class="metric-cell">
+          <div class="metric-num">7+</div>
+          <div class="metric-lbl">SAP certifications held</div>
+        </div>
+        <div class="metric-cell">
+          <div class="metric-num">15+</div>
+          <div class="metric-lbl">Business processes delivered</div>
+        </div>
+        <div class="metric-cell">
+          <div class="metric-num">0</div>
+          <div class="metric-lbl">Failed projects</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <section class="section section-bordered" id="process">
+    <div class="wrap">
+      <div class="section-head-row reveal">
+        <div>
+          <span class="section-label">How we work</span>
+          <h2 class="section-title">Delivery in 5 steps.<br/>No surprises.</h2>
+        </div>
+        <p class="section-sub">A process refined across 150+ enterprise engagements — designed for speed, quality, and predictability.</p>
+      </div>
+      <div class="process-list reveal">
+        <div class="process-item">
+          <div class="process-num">01</div>
+          <div class="process-body">
+            <div class="process-name">Discovery &amp; Scoping</div>
+            <p class="process-desc">Deep-dive workshops to understand your SAP landscape, business goals, and user needs. We define scope, timelines, and success metrics together.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">02</div>
+          <div class="process-body">
+            <div class="process-name">UX Design &amp; Prototype</div>
+            <p class="process-desc">High-fidelity Figma prototypes validated with real end-users before a single line of code is written.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">03</div>
+          <div class="process-body">
+            <div class="process-name">Agile Development</div>
+            <p class="process-desc">2-week sprints with full transparency — live demos, progress dashboards, and daily standups so you're always in the loop.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">04</div>
+          <div class="process-body">
+            <div class="process-name">SAP Integration &amp; QA</div>
+            <p class="process-desc">Rigorous integration testing against your SAP landscape, security review, and performance benchmarking before release.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">05</div>
+          <div class="process-body">
+            <div class="process-name">Go-Live &amp; Support</div>
+            <p class="process-desc">Managed deployment, user training, hypercare support, and ongoing maintenance so you're never left alone post-launch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="section section-bg section-bordered" id="industries">
+    <div class="wrap">
+      <div class="section-head-row reveal">
+        <div>
+          <span class="section-label">Industries</span>
+          <h2 class="section-title">Deep expertise across<br/>enterprise verticals.</h2>
+        </div>
+        <p class="section-sub">We understand the operational challenges and SAP configurations across major industries.</p>
+      </div>
+      <div class="ind-grid reveal">
+        <div class="ind-card">
+          <div class="ind-icon">🛡️</div>
+          <div class="ind-name">Defense &amp; Military</div>
+          <div class="ind-desc">Military planning &amp; operations mobile apps · Supply chain management · Fully offline solutions for secure environments</div>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">🚆</div>
+          <div class="ind-name">Public Transport</div>
+          <div class="ind-desc">EAM &amp; HCM Fiori apps · Hybrid &amp; native iOS mobility · Workforce management for 10,000+ end users</div>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">⚡</div>
+          <div class="ind-name">Energy &amp; Utilities</div>
+          <div class="ind-desc">SAP time sheeting solutions · HCM app upgrades · Field service portals · Fiori launchpad modernisation</div>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">⛽</div>
+          <div class="ind-name">Oil &amp; Gas</div>
+          <div class="ind-desc">S/4HANA Fiori implementation · Finance, SD, MM &amp; PM modules · First SAP partner S/4HANA go-live in the region</div>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">🍞</div>
+          <div class="ind-name">Food &amp; Beverage</div>
+          <div class="ind-desc">Custom Fiori inspection apps · Results recording with image upload · OData services to UI5 end-to-end</div>
+        </div>
+        <div class="ind-card">
+          <div class="ind-icon">🏛️</div>
+          <div class="ind-name">State &amp; Federal Government</div>
+          <div class="ind-desc">Enterprise-grade SAP BTP solutions · Compliance &amp; security hardening · XSUAA role-based access control</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section section-bordered">
+    <div class="wrap">
+      <div class="section-head-row reveal">
+        <div>
+          <span class="section-label">Recognition &amp; achievements</span>
+          <h2 class="section-title">Award-winning expertise.<br/>Community recognised.</h2>
+        </div>
+        <p class="section-sub">Recognised by SAP globally for contributions to the SAP developer community and delivery excellence on complex enterprise programs.</p>
+      </div>
+      <div class="testi-grid reveal">
+        <div class="testi-card">
+          <div class="testi-stars">🏆</div>
+          <p class="testi-quote">"Selected as SAP Community Member of the Month — February 2015 — for sharing expertise in the niche area of SAP Mobility and solving community members' queries on the SAP Community Network."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SAP</div>
+            <div>
+              <div class="testi-name">SAP Community Award</div>
+              <div class="testi-role">Member of the Month · February 2015</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">🎤</div>
+          <p class="testi-quote">"Selected as one of the speakers at DKOM'16 at SAP Labs Bangalore to deliver a customer success story on 'Impact of Fiori on S/4HANA' — representing a live S/4HANA 1503 Fiori implementation for a Houston-based Oil &amp; Gas company."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SAP</div>
+            <div>
+              <div class="testi-name">SAP DKOM Speaker</div>
+              <div class="testi-role">SAP Labs Bangalore · 2016</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">⭐</div>
+          <p class="testi-quote">"Recognised with the Deloitte Shout Out Award for exceptional turnaround of critical defect fixes during the Sydney Trains Equip apps implementation — ensuring zero disruption to 10,000+ end users."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">DL</div>
+            <div>
+              <div class="testi-name">Deloitte Shout Out Award</div>
+              <div class="testi-role">Sydney Trains Equip Implementation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section section-bg section-bordered" id="certifications">
+    <div class="wrap">
+      <div class="section-head-row reveal">
+        <div>
+          <span class="section-label">Certifications</span>
+          <h2 class="section-title">SAP certified.<br/>Continuously learning.</h2>
+        </div>
+        <p class="section-sub">Holding multiple active SAP certifications across BTP, Fiori, ABAP, and low-code development.</p>
+      </div>
+      <div class="process-list reveal">
+        <div class="process-item">
+          <div class="process-num">2025</div>
+          <div class="process-body">
+            <div class="process-name">SAP Certified Associate — Backend Developer, SAP Cloud Application Programming Model</div>
+            <p class="process-desc">Validates expertise in building cloud-native backend services using SAP CAP on BTP.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">2025</div>
+          <div class="process-body">
+            <div class="process-name">SAP Certified Associate — SAP Build Work Zone, Implementation &amp; Administration</div>
+            <p class="process-desc">Covers implementation, configuration, and administration of SAP Build Work Zone for enterprise launchpad solutions.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">2024</div>
+          <div class="process-body">
+            <div class="process-name">SAP Certified Associate — Low-Code/No-Code Developer, SAP Build</div>
+            <p class="process-desc">Validates capability in building enterprise apps, automations, and workflows using SAP Build's low-code toolset.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">2024</div>
+          <div class="process-body">
+            <div class="process-name">watsonx.ai Technical Sales Intermediate · IBM</div>
+            <p class="process-desc">Demonstrates technical knowledge in IBM watsonx.ai for enterprise AI and generative AI solutions.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">2023</div>
+          <div class="process-body">
+            <div class="process-name">SAP BTP Solution Architecture for Industries — Clean Core</div>
+            <p class="process-desc">Covers BTP solution architecture principles, clean core approach, and industry-specific deployment patterns.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">2020</div>
+          <div class="process-body">
+            <div class="process-name">SAP Certified Development Associate — SAP Fiori Application Developer</div>
+            <p class="process-desc">Validates professional-level Fiori application development skills across UI5, OData services, and Fiori Launchpad.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">2020</div>
+          <div class="process-body">
+            <div class="process-name">SAP Certified Development Associate — ABAP with SAP NetWeaver 7.50</div>
+            <p class="process-desc">Validates ABAP programming expertise for SAP backend development, OData services, and system integration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <div class="partners-section">
+    <div class="wrap">
+      <p class="partners-label">Technology ecosystem</p>
+      <div class="partners-row">
+        <div class="partner-pill">🔷 SAP</div>
+        <div class="partner-pill">🔵 IBM</div>
+        <div class="partner-pill">🪟 Microsoft Azure</div>
+        <div class="partner-pill">🔶 Amazon Web Services</div>
+        <div class="partner-pill">🌐 Google Cloud</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <span class="section-label">Let's build together</span>
+        <h2 class="cta-title">Ready to transform<br/>your enterprise?</h2>
+        <p class="cta-sub">Share a few project details and we'll return a tailored SAP roadmap within 5 business days — including architecture options, effort, and go-live plan.</p>
+        <ul class="contact-benefits">
+          <li>✔ Response within 24 hours</li>
+          <li>✔ NDA available on request</li>
+          <li>✔ SAP-certified architects &amp; UX leads</li>
+          <li>✔ Secure handling of confidential info</li>
+        </ul>
+        <div class="contact-alt">
+          Prefer email or phone? <a href="mailto:hubofpixels@gmail.com">hubofpixels@gmail.com</a> · <a href="tel:+61-000-000-000">+61 000 000 000</a>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjvqwqop" method="POST" data-success-message="Thanks! We'll be in touch shortly.">
+          <div class="form-row">
+            <label class="form-field">
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Jane Doe" required autocomplete="name" />
+            </label>
+            <label class="form-field">
+              <span>Work email</span>
+              <input type="email" name="email" placeholder="you@company.com" required autocomplete="email" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="form-field">
+              <span>Company</span>
+              <input type="text" name="company" placeholder="Company name" autocomplete="organization" />
+            </label>
+            <label class="form-field">
+              <span>Project timeline</span>
+              <select name="timeline" required>
+                <option value="" disabled selected>Select timeline</option>
+                <option>0-3 months</option>
+                <option>3-6 months</option>
+                <option>6-12 months</option>
+                <option>Exploring options</option>
+              </select>
+            </label>
+          </div>
+          <label class="form-field">
+            <span>Project goals</span>
+            <textarea name="message" rows="4" placeholder="Share your SAP landscape, challenges, and success criteria." required></textarea>
+          </label>
+          <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label class="form-consent">
+            <input type="checkbox" name="consent" required />
+            <span>I agree to the privacy policy and to be contacted about this request.</span>
+          </label>
+          <button type="submit" class="btn btn-dark btn-lg full">Send request →</button>
+          <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">HubOfPixels</div>
+          <p class="footer-desc">Enterprise web & mobile development specialists with deep SAP expertise. Building digital products that scale.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-soc">in</a>
+            <a href="#" class="footer-soc">X</a>
+            <a href="#" class="footer-soc">GH</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-head">Services</div>
+          <div class="footer-col-links">
+            <a href="#services">SAP Fiori / UI5</a>
+            <a href="#services">Mobile Apps</a>
+            <a href="#services">Web Portals</a>
+            <a href="#services">UX / UI Design</a>
+            <a href="#services">AI &amp; Automation</a>
+            <a href="#services">Cloud &amp; DevOps</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-head">Industries</div>
+          <div class="footer-col-links">
+            <a href="#industries">Manufacturing</a>
+            <a href="#industries">Oil &amp; Gas</a>
+            <a href="#industries">Chemicals</a>
+            <a href="#industries">Utilities</a>
+            <a href="#industries">Healthcare</a>
+            <a href="#industries">Retail</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-head">Company</div>
+          <div class="footer-col-links">
+            <a href="#">About Us</a>
+            <a href="#">Case Studies</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 HubOfPixels. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/cookie-policy.html">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar border on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10));
+
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('navMenu');
+    const closeNav = () => {
+      navMenu?.setAttribute('data-visible', 'false');
+      navToggle?.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    };
+    navToggle?.addEventListener('click', () => {
+      const isVisible = navMenu?.getAttribute('data-visible') === 'true';
+      const nextState = !isVisible;
+      navMenu?.setAttribute('data-visible', String(nextState));
+      navToggle.setAttribute('aria-expanded', String(nextState));
+      document.body.classList.toggle('nav-open', nextState);
+    });
+    navMenu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+    document.addEventListener('keydown', evt => {
+      if (evt.key === 'Escape') closeNav();
+    });
+
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    const contactStatus = document.getElementById('contactStatus');
+    const setStatus = message => {
+      if (contactStatus) contactStatus.textContent = message || '';
+    };
+    contactForm?.addEventListener('submit', async event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!(form instanceof HTMLFormElement)) return;
+      const formData = new FormData(form);
+      if (formData.get('website')) {
+        setStatus('');
+        return;
+      }
+      const submitBtn = form.querySelector('button[type=\"submit\"]');
+      if (!submitBtn) return;
+      const successMessage = form.dataset.successMessage || 'Thanks for your message!';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      setStatus('Sending your request...');
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' }
+        });
+        if (response.ok) {
+          form.reset();
+          setStatus(successMessage);
+        } else {
+          setStatus('Something went wrong. Please try again or email hubofpixels@gmail.com.');
+        }
+      } catch (error) {
+        setStatus('Network error — please retry in a moment.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send request →';
+      }
+    });
+
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('in'), i * 80);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
