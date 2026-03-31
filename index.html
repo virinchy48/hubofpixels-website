@@ -30,6 +30,21 @@
   <meta name="twitter:image" content="https://hubofpixels.com/static/og-cover.jpg" />
   <meta name="twitter:creator" content="@HubOfPixels" />
   <title>HubOfPixels | Enterprise Web & Mobile Development</title>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HubOfPixels",
+    "url": "https://hubofpixels.com",
+    "email": "hubofpixels@gmail.com",
+    "description": "SAP BTP, Fiori & Enterprise Mobile specialists with 13+ years experience building complex enterprise digital solutions.",
+    "foundingDate": "2012",
+    "areaServed": "Worldwide",
+    "knowsAbout": ["SAP BTP", "SAP Fiori", "SAP CAP", "Enterprise Mobile Apps", "SAP UI5", "ABAP", "S/4HANA"],
+    "sameAs": []
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
@@ -778,7 +793,7 @@
           <span class="section-label">How we work</span>
           <h2 class="section-title">Delivery in 5 steps.<br/>No surprises.</h2>
         </div>
-        <p class="section-sub">A process refined across 150+ enterprise engagements — designed for speed, quality, and predictability.</p>
+        <p class="section-sub">A process refined across 10+ enterprise engagements — designed for speed, quality, and predictability.</p>
       </div>
       <div class="process-list reveal">
         <div class="process-item">
@@ -1159,6 +1174,7 @@
         if (response.ok) {
           form.reset();
           setStatus(successMessage);
+          if (window.gtag) gtag('event', 'generate_lead', { event_category: 'Contact', event_label: 'Contact Form Submitted' });
         } else {
           setStatus('Something went wrong. Please try again or email hubofpixels@gmail.com.');
         }
