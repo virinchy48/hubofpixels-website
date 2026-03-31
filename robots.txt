@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /dist/
 
-Sitemap: https://hubofpixels.com/sitemap.xml
+Sitemap: https://www.hubofpixels.com/sitemap.xml
