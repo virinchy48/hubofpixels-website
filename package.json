@@ -1,0 +1,12 @@
+{
+  "name": "hubofpixels.com",
+  "version": "1.0.0",
+  "description": "Static HubOfPixels site with HTML minification build step",
+  "scripts": {
+    "build": "python3 build.py",
+    "deploy": "python3 build.py && npx wrangler pages deploy dist --project-name hubofpixels --branch main --commit-dirty=true"
+  },
+  "keywords": ["hubofpixels", "sap", "static-site"],
+  "author": "HubOfPixels",
+  "license": "MIT"
+}
